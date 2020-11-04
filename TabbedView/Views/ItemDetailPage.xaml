@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TabbedView.Views.ItemDetailPage" Title="{Binding Title}" >
+     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+    <!--<Frame Grid.Column="0" HasShadow="False" CornerRadius="0" BorderColor="Gray" Padding="0" HeightRequest="100" WidthRequest="100">
+                                <Grid>
+                                <Image Source="{Binding ImageName}" HeightRequest="50" WidthRequest="50" />
+                                <Label IsVisible="{Binding NoImage}" Text="No Image" TextColor="LightSkyBlue" FontSize="Micro" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                                </Grid>
+                            </Frame>-->
+    <StackLayout Grid.Column="1" Spacing="0" Padding="15">
+        <Label Text="Name:" FontSize="18" TextColor="Black"/>
+        <Label Text="{Binding Item.Name}" FontSize="14" />
+         <Label Text="Email:" FontSize="18" Margin="0,10,0,0" TextColor="Black"/>
+        <Label Text="{Binding Item.Email}" FontSize="14" />
+         <Label Text="Designation:" FontSize="18" Margin="0,10,0,0" TextColor="Black"/>
+        <Label Text="{Binding Item.Designation}" FontSize="14" />
+         <Label Text="Mobile:" FontSize="18" Margin="0,10,0,0" TextColor="Black"/>
+        <Label Text="{Binding Item.Mobile}" FontSize="14" />
+    </StackLayout>
+    </Grid>
+</ContentPage>
